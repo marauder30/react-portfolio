@@ -1,11 +1,9 @@
 import React from 'react';
-import { Card } from 'reactstrap';
+import Header from './components/Header';
 
 function App() {
   return (
-    <Card>
-      <h1>Nick Koch Portfolio</h1>
-    </Card>
+    <Header />
   );
 }
 
