@@ -1,43 +1,29 @@
 import React from "react";
+import { Link, useLocation } from "react-router-dom";
 
-const Nav = (props) => {
+const Nav = () => {
+    const location = useLocation();
     return (
         <ul className="nav nav-tabs justify-content-center">
             <li className="nav-item">
-                <a
-                  href="#home"
-                  onClick={() => props.handlePageChange("Home")}
-                  className={props.currentPage === "Home" ? "nav-link active" : "nav-link"}
-                >
+                <Link to="/" className={location.pathname === "/" ? "nav-link active" : "nav-link"}>
                     Home
-                </a>
+                </Link>
             </li>
             <li className="nav-item">
-                <a
-                  href="#about"
-                  onClick={() => props.handlePageChange("About")}
-                  className={props.currentPage === "About" ? "nav-link active" : "nav-link"}
-                >
+                <Link to="/about" className={location.pathname === "/about" ? "nav-link active" : "nav-link"}>
                     About
-                </a>
+                </Link>
             </li>
             <li className="nav-item">
-                <a
-                  href="#portfolio"
-                  onClick={() => props.handlePageChange("Portfolio")}
-                  className={props.currentPage === "Portfolio" ? "nav-link active" : "nav-link"}
-                >
+                <Link to="/portfolio" className={location.pathname === "/portfolio" ? "nav-link active" : "nav-link"}>
                     Portfolio
-                </a>
+                </Link>
             </li>
             <li className="nav-item">
-                <a
-                  href="#contact"
-                  onClick={() => props.handlePageChange("Contact")}
-                  className={props.currentPage === "Contact" ? "nav-link active" : "nav-link"}
-                >
+                <Link to="/contact" className={location.pathname === "/contact" ? "nav-link active" : "nav-link"}>
                     Contact
-                </a>
+                </Link>
             </li>
         </ul>
     )
