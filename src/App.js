@@ -1,10 +1,6 @@
 import React from 'react';
-import Header from './components/Header';
+import PortfolioContainer from "./PortfolioContainer";
 
-function App() {
-  return (
-    <Header />
-  );
-}
+const App = () => <PortfolioContainer />;
 
 export default App;
