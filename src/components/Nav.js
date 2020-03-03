@@ -1,19 +1,43 @@
 import React from "react";
 
-const Nav = () => {
+const Nav = (props) => {
     return (
-        <ul className="nav justify-content-center">
+        <ul className="nav nav-tabs justify-content-center">
             <li className="nav-item">
-                <a className="nav-link active" href="index.html">Home</a>
+                <a
+                  href="#home"
+                  onClick={() => props.handlePageChange("Home")}
+                  className={props.currentPage === "Home" ? "nav-link active" : "nav-link"}
+                >
+                    Home
+                </a>
             </li>
             <li className="nav-item">
-                <a className="nav-link active" href="about.html">About</a>
+                <a
+                  href="#about"
+                  onClick={() => props.handlePageChange("About")}
+                  className={props.currentPage === "About" ? "nav-link active" : "nav-link"}
+                >
+                    About
+                </a>
             </li>
             <li className="nav-item">
-                <a className="nav-link active" href="portfolio.html">Portfolio</a>
+                <a
+                  href="#portfolio"
+                  onClick={() => props.handlePageChange("Portfolio")}
+                  className={props.currentPage === "Portfolio" ? "nav-link active" : "nav-link"}
+                >
+                    Portfolio
+                </a>
             </li>
             <li className="nav-item">
-                <a className="nav-link active" href="contact.html">Contact</a>
+                <a
+                  href="#contact"
+                  onClick={() => props.handlePageChange("Contact")}
+                  className={props.currentPage === "Contact" ? "nav-link active" : "nav-link"}
+                >
+                    Contact
+                </a>
             </li>
         </ul>
     )
