@@ -1,5 +1,5 @@
 import React from "react";
-import photo from "../photo.JPG";
+import photo from "../assets/photo.JPG";
 
 const About = () => (
 <div class="container">
